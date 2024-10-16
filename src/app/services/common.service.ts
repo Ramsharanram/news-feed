@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { User } from '../interfaces/user.model';
+import { LoginResponce, User } from '../interfaces/user.model';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ export class CommonService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public login(data:User){
-    return this.httpClient.post('https://dummyjson.com/auth/login', data);
+  public login(data:User):Observable<LoginResponce>{
+    return this.httpClient.post<LoginResponce>('https://dummyjson.com/auth/login', data);
   }
 }

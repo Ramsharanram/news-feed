@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ListRoutingModule } from './list-routing.module';
-import { ListComponent } from './list.component';
+import { ProfileRoutingModule } from './profile-routing.module';
+import { ProfileComponent } from './profile.component';
 import { SharedModule } from '../shared.module';
+
 
 
 @NgModule({
   declarations: [
-    ListComponent
+    ProfileComponent
   ],
   imports: [
     CommonModule,
-    ListRoutingModule,
+    ProfileRoutingModule,
     SharedModule
   ]
 })
-export class ListModule { }
+export class ProfileModule { }
